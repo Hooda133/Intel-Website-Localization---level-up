@@ -234,9 +234,10 @@ section p {
 
 main > p {
   text-align: center;
-  padding: 0 20px 35px;
-  color: #3f4a58;
-  font-size: 1.35rem;
+  margin: 16px 0 0;
+  padding: 0 20px 24px;
+  color: #6c757d;
+  font-size: 1rem;
 }
 
 .impact-section {
@@ -264,13 +265,17 @@ main > p {
   box-shadow: none;
 }
 
-.impact-section .row > div {
+.impact-section .row > div > .card {
+  background: #ffffff;
+  border: 1px solid #dbe5ee;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 60, 125, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.impact-section .row > div:hover {
-  transform: scale(1.02);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+.impact-section .row > div > .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 60, 125, 0.16);
 }
 
 .impact-section h3 {
@@ -282,9 +287,15 @@ main > p {
   line-height: 1.7;
 }
 
-.impact-section a:hover,
-.impact-section a:focus-visible {
+.impact-link {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.impact-link:hover,
+.impact-link:focus-visible {
+  color: #005a9e !important;
   text-decoration: underline;
+  transform: translateX(3px);
 }
 
 .subscription-box {
@@ -312,7 +323,7 @@ main > p {
 }
 
 footer {
-  background: linear-gradient(135deg, #003c7d, #0068b5);
+  background: linear-gradient(135deg, #001f3f, #003c7d);
   color: white;
   text-align: center;
   padding: 18px 20px;
