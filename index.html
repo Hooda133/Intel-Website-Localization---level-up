@@ -151,6 +151,23 @@
     </div>
     </section>
     <p>Scroll to view timeline | Hover over cards to learn more!</p>
+
+    <div class="subscription-box p-3 p-md-4 my-4 rounded-3">
+      <div class="container">
+        <h2 class="h3 mb-2 text-center">Stay Updated on Sustainability</h2>
+        <p class="mb-3 text-center">Subscribe to receive the latest updates on Intel's sustainability initiatives and progress.</p>
+        <form class="row g-2 justify-content-center needs-validation" novalidate>
+          <div class="col-12 col-md-7 col-lg-6">
+            <label class="visually-hidden" for="subscription-email">Email address</label>
+            <input class="form-control form-control-lg" id="subscription-email" name="email" type="email" placeholder="Enter your email address" required />
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+          <div class="col-12 col-md-auto">
+            <button class="btn btn-light btn-lg w-100 px-4" type="submit">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </main>
 
   <!-- Simple footer -->
@@ -171,6 +188,15 @@
 
     showFirstMilestone();
     window.addEventListener("pageshow", showFirstMilestone);
+
+    document.querySelector(".needs-validation").addEventListener("submit", function (event) {
+      if (!this.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+
+      this.classList.add("was-validated");
+    });
   </script>
 </body>
 </html>
