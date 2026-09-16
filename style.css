@@ -29,7 +29,7 @@ nav {
   justify-content: flex-start;
   gap: 40px;
   padding: 10px 8%;
-  background: linear-gradient(135deg, #003c7d, #0068b5);
+  background: linear-gradient(135deg, #001f3f, #003c7d);
 }
 
 .nav-links {
