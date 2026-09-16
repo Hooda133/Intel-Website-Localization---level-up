@@ -236,7 +236,7 @@ main > p {
   text-align: center;
   margin: 16px 0 0;
   padding: 0 20px 24px;
-  color: #6c757d;
+  color: #52606d;
   font-size: 1rem;
 }
 
@@ -278,7 +278,7 @@ main > p {
   box-shadow: 0 12px 24px rgba(0, 60, 125, 0.16);
 }
 
-.impact-section h3 {
+.impact-section h2 {
   color: #172033;
 }
 
@@ -288,6 +288,7 @@ main > p {
 }
 
 .impact-link {
+  color: #005a9e !important;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
@@ -296,6 +297,8 @@ main > p {
   color: #005a9e !important;
   text-decoration: underline;
   transform: translateX(3px);
+  outline: 3px solid #00c7fd;
+  outline-offset: 3px;
 }
 
 .subscription-box {
@@ -320,6 +323,11 @@ main > p {
 .subscription-box .form-control:focus {
   border-color: #00c7fd;
   box-shadow: 0 0 0 0.25rem rgba(0, 199, 253, 0.25);
+}
+
+.subscription-box .btn:focus-visible {
+  outline: 3px solid #00c7fd;
+  outline-offset: 3px;
 }
 
 footer {
