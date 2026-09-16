@@ -239,6 +239,54 @@ main > p {
   font-size: 1.35rem;
 }
 
+.impact-section {
+  display: block;
+  overflow: visible;
+  padding-inline: 0;
+  background: transparent;
+}
+
+.impact-section > .container {
+  flex: none;
+  min-height: 0;
+  padding: 0;
+  overflow: visible;
+  background: transparent;
+  box-shadow: none;
+}
+
+.impact-section > .container::before {
+  content: none;
+}
+
+.impact-section > .container:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.impact-section .row > div {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-section .row > div:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.impact-section h3 {
+  color: #172033;
+}
+
+.impact-section p {
+  color: #4d5968;
+  line-height: 1.7;
+}
+
+.impact-section a:hover,
+.impact-section a:focus-visible {
+  text-decoration: underline;
+}
+
 .subscription-box {
   background: linear-gradient(135deg, #003c7d, #0068b5);
   color: white;
