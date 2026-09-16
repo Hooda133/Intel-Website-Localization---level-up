@@ -26,9 +26,9 @@ nav {
   min-height: 64px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 40px;
-  padding: 10px 30px;
+  padding: 10px 8%;
   background: linear-gradient(135deg, #003c7d, #0068b5);
 }
 
@@ -232,7 +232,7 @@ section p {
 
 /* Bottom instruction */
 
-body > p {
+main > p {
   text-align: center;
   padding: 0 20px 35px;
   color: #3f4a58;
