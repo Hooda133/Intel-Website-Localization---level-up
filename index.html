@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intel: Sustainability Through the Ages</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Main navigation -->
+  <nav aria-label="Main navigation">
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#timeline">Timeline</a>
+      <a href="https://www.intel.com/content/www/us/en/environment/intel-and-the-environment.html" target="_blank" rel="noopener noreferrer">Sustainability</a>
+    </div>
+  </nav>
+
+  <!-- Header / Hero Section -->
+  <header id="home">
+    <div>
+      <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
+      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
+      <!-- Main Heading -->
+      <h1>
+        Technology. Innovation. Sustainability.
+      </h1>
+
+      <!-- Subheading / Description -->
+      <p>
+        Explore Intel's journey through the decades and see how innovation continues to shape a smarter, more sustainable future.
+      </p>
+    </div>
+  </header>
+
+  <!-- Timeline Cards Section -->
+  <section id="timeline">
+
+    <!-- Card 1: 1968 -->
+    <div tabindex="0">
+      <h2>1968</h2>
+      <h3>Intel Founded</h3>
+      <img src="img/1.jpg" alt="Early semiconductor technology and Intel founding in 1968" />
+      <p>
+        Robert Noyce and Gordon Moore rename the newly formed company 
+        NM Electronics to Intel Corporation, laying the foundation for 
+        decades of technological innovation.
+      </p>
+    </div>
+
+    <!-- Card 2: 1971 -->
+    <div tabindex="0">
+      <h2>1971</h2>
+      <h3>First Microprocessor</h3>
+      <img src="img/2.jpg" alt="Intel microprocessor on an early circuit board" />
+      <p>
+        Intel debuts the 4004, the world's first commercial microprocessor, 
+        igniting the microprocessor revolution and propelling the future 
+        of computing devices.
+      </p>
+    </div>
+
+    <!-- Card 3: 1978 -->
+    <div tabindex="0">
+      <h2>1978</h2>
+      <h3>8086 Processor</h3>
+      <img src="img/3.jpg" alt="Intel 8086 processor from 1978" />
+      <p>
+        Launch of the 8086 processor, establishing the x86 architecture 
+        that drives countless PCs and servers in the modern era.
+      </p>
+    </div>
+
+    <!-- Card 4: 1985 -->
+    <div tabindex="0">
+      <h2>1985</h2>
+      <h3>386 Processor</h3>
+      <img src="img/4.jpg" alt="Intel processor chip from 1985" />
+      <p>
+        Intel introduces the 386 processor with 32-bit architecture, 
+        ushering in a new era of performance and multitasking for 
+        personal computers.
+      </p>
+    </div>
+
+    <!-- Card 5: 2006 -->
+    <div tabindex="0">
+      <h2>2006</h2>
+      <h3>Peak GHG Emissions</h3>
+      <img src="img/intel-2006-card.png" alt="Intel logo representing peak greenhouse gas emissions in 2006" />
+      <p>
+        This year marks Intel's highest annual greenhouse gas emissions 
+        for operations. Over subsequent years, Intel invests heavily in 
+        chemical abatement, renewable energy, and energy-efficient 
+        manufacturing to reverse this trend.
+      </p>
+    </div>
+
+    <!-- Card 6: 2020 -->
+    <div tabindex="0">
+      <h2>2020</h2>
+      <h3>RISE Strategy</h3>
+      <img src="img/intel-2020-card.png" alt="Intel logo representing the RISE strategy launched in 2020" />
+      <p>
+        Intel launches its RISE (Responsible, Inclusive, Sustainable, 
+        Enabling) strategy and 2030 goals, aiming to drive industry-wide 
+        progress on climate action, water stewardship, and waste reduction.
+      </p>
+    </div>
+
+    <!-- Card 7: 2022 -->
+    <div tabindex="0">
+      <h2>2022</h2>
+      <h3>Net-Zero By 2040</h3>
+      <img src="img/intel-2022-card.png" alt="Intel logo representing the net-zero by 2040 commitment announced in 2022" />
+      <p>
+        Intel announces its commitment to achieve net-zero greenhouse 
+        gas emissions (Scope 1 and 2) across its global operations 
+        by 2040, building on years of environmental initiatives.
+      </p>
+    </div>
+
+    <!-- Card 8: 2023 -->
+    <div tabindex="0">
+      <h2>2023</h2>
+      <h3>Renewable Electricity</h3>
+      <img src="img/intel-2023-card.png" alt="Intel logo representing renewable electricity progress in 2023" />
+      <p>
+        The company achieves 99% renewable electricity usage worldwide, 
+        helping to drastically lower carbon emissions and driving progress 
+        toward Intel's long-term sustainability goals.
+      </p>
+    </div>
+
+    <!-- Card 9: 2024 -->
+    <div tabindex="0">
+      <h2>2024</h2>
+      <h3>Sustainability Summit</h3>
+      <img src="img/intel-2024-card.png" alt="Intel logo representing the Sustainability Summit held in 2024" />
+      <p>
+        Intel hosts its first Sustainability Summit, uniting suppliers, 
+        government officials, and industry leaders to collaborate on 
+        next-generation sustainable semiconductor manufacturing.
+      </p>
+    </div>
+  </section>
+  <p>Scroll to view timeline | Hover over cards to learn more!</p>
+
+  <!-- Simple footer -->
+  <footer id="about">
+    <p>Intel Sustainability Through the Ages</p>
+  </footer>
+
+  <script>
+    // Start the timeline at the first milestone on every page load.
+    const timeline = document.querySelector("section");
+
+    function showFirstMilestone() {
+      timeline.scrollTo({
+        left: 0,
+        behavior: "auto"
+      });
+    }
+
+    showFirstMilestone();
+    window.addEventListener("pageshow", showFirstMilestone);
+  </script>
+</body>
+</html>

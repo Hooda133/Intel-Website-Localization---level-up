@@ -1,0 +1,380 @@
+/* ------------------------------
+   General Page Styles
+--------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  background: #f4f7fa;
+  color: #172033;
+}
+
+/* ------------------------------
+   Navigation
+--------------------------------- */
+
+nav {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 10px 30px;
+  background: linear-gradient(135deg, #003c7d, #0068b5);
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: white;
+  font-size: 1.18rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: #dceeff;
+  text-decoration: underline;
+}
+
+/* ------------------------------
+   Hero Section
+--------------------------------- */
+
+header {
+  min-height: 500px;
+  background-image: linear-gradient(
+    rgba(0, 60, 125, 0.74),
+    rgba(0, 104, 181, 0.74)
+  ), url("img/Sus.png");
+  background-size: cover;
+  background-position: right center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 70px 8%;
+}
+
+header > div {
+  max-width: 700px;
+}
+
+header img {
+  width: 180px;
+  height: auto;
+  margin-bottom: 35px;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 700;
+  margin: 0 0 25px;
+  line-height: 1.1;
+}
+
+header p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+/* ------------------------------
+   Timeline
+--------------------------------- */
+
+section {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding: 60px clamp(40px, 8vw, 80px);
+  scroll-behavior: smooth;
+  scroll-padding-inline: clamp(40px, 8vw, 80px);
+  overflow-anchor: none;
+  scrollbar-color: #0068b5 #e2e8ef;
+  scrollbar-width: thin;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.86),
+    rgba(255, 255, 255, 0.86)
+  ), url("img/intel background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+section::-webkit-scrollbar {
+  height: 10px;
+}
+
+section::-webkit-scrollbar-track {
+  background: #e2e8ef;
+  border-radius: 4px;
+}
+
+section::-webkit-scrollbar-thumb {
+  background: #0068b5;
+  border-radius: 10px;
+  border: 2px solid #e2e8ef;
+}
+section::-webkit-scrollbar-thumb:hover {
+  background: #005a9e;
+}
+/* Timeline Cards */
+
+section > div {
+  flex: 0 0 320px;
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  min-height: 380px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section > div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 45, 85, 0.78);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+section > div:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+section > div:focus-visible {
+  outline: 3px solid #00c7fd;
+  outline-offset: 4px;
+}
+
+section > div:hover::before,
+section > div:focus::before,
+section > div:focus-within::before {
+  opacity: 1;
+}
+
+section > div > h2,
+section > div > h3,
+section > div > p {
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+section > div > h2 {
+  color: white;
+}
+
+section > div > h3,
+section > div > p {
+  color: white;
+}
+
+section > div:hover > h2,
+section > div:hover > h3,
+section > div:hover > p,
+section > div:focus > h2,
+section > div:focus > h3,
+section > div:focus > p,
+section > div:focus-within > h2,
+section > div:focus-within > h3,
+section > div:focus-within > p {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Years */
+
+h2 {
+  color: #0068b5;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+/* Milestone Titles */
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 20px;
+}
+
+/* Description */
+
+section p {
+  color: #4d5968;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* Bottom instruction */
+
+body > p {
+  text-align: center;
+  padding: 0 20px 35px;
+  color: #3f4a58;
+  font-size: 1.35rem;
+}
+
+footer {
+  background: linear-gradient(135deg, #003c7d, #0068b5);
+  color: white;
+  text-align: center;
+  padding: 18px 20px;
+  font-size: 1.18rem;
+  font-weight: 400;
+}
+
+/* ------------------------------
+   Mobile Layout
+--------------------------------- */
+
+@media (min-width: 769px) {
+  section {
+    scroll-snap-type: x mandatory;
+  }
+
+  section > div {
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 768px) {
+
+  header {
+    min-height: 400px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 35px 16px;
+    background-position: center;
+  }
+
+  nav {
+    padding: 8px 16px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  header img {
+    width: 120px;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  section {
+    flex-direction: column;
+    overflow-x: hidden;
+    gap: 18px;
+    padding: 28px 16px;
+    scroll-padding-inline: 16px;
+  }
+
+  section > div {
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 22px;
+    min-height: auto;
+  }
+
+  section > div > h2 {
+    font-size: 2rem;
+  }
+
+  section > div > h3 {
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+  }
+
+  section > div > p {
+    line-height: 1.5;
+  }
+}
+/* Timeline Images */
+
+section > div img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  background: #003c7d;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+section > div:nth-child(8) img,
+section > div:nth-child(9) img {
+  object-position: left center;
+}
+
+@media (max-width: 768px), (hover: none) and (pointer: coarse) {
+  section > div {
+    transform: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  section > div:focus,
+  section > div:focus-within,
+  section > div:active {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  section > div:focus::before,
+  section > div:focus-within::before,
+  section > div:active::before {
+    opacity: 1;
+  }
+
+  section > div:focus > h2,
+  section > div:focus > h3,
+  section > div:focus > p,
+  section > div:focus-within > h2,
+  section > div:focus-within > h3,
+  section > div:focus-within > p,
+  section > div:active > h2,
+  section > div:active > h3,
+  section > div:active > p {
+    opacity: 1;
+    visibility: visible;
+  }
+}
