@@ -282,6 +282,12 @@ main > p {
   color: #172033;
 }
 
+.sustainability-icon {
+  color: #005a9e;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
 .impact-section p {
   color: #4d5968;
   line-height: 1.7;
