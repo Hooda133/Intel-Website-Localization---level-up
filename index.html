@@ -295,8 +295,14 @@
 
     // Start the timeline at the first milestone on every page load.
     const timeline = document.querySelector("section");
+    history.scrollRestoration = "manual";
 
     function showFirstMilestone() {
+      window.scrollTo({
+        top: 0,
+        behavior: "auto"
+      });
+
       timeline.scrollTo({
         left: 0,
         behavior: "auto"
