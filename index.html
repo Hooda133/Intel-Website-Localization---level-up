@@ -201,7 +201,7 @@
             <div class="invalid-feedback">Please enter a valid email address.</div>
           </div>
           <div class="col-12 col-md-auto">
-            <button class="btn btn-light btn-lg w-100 px-4" type="submit">Subscribe</button>
+            <a class="btn btn-light btn-lg w-100 px-4" href="https://www.intel.com/content/www/us/en/newsroom/subscribe.html" target="_blank" rel="noopener noreferrer">Subscribe</a>
           </div>
         </form>
       </div>
@@ -220,6 +220,35 @@
   </footer>
 
   <script>
+    // Keep the page direction in sync with the active language or Google Translate.
+    const rtlLanguages = ["ar", "dv", "fa", "he", "ku", "ps", "sd", "ur", "yi"];
+    const pageRoot = document.documentElement;
+
+    function updateTextDirection() {
+      const language = (pageRoot.getAttribute("lang") || "").toLowerCase().split("-")[0];
+      const googleTranslateClasses = `${pageRoot.className} ${document.body.className}`;
+      const isGoogleRtl = googleTranslateClasses.includes("translated-rtl");
+      const isGoogleLtr = googleTranslateClasses.includes("translated-ltr");
+      const isRtl = isGoogleRtl || (!isGoogleLtr && rtlLanguages.includes(language));
+      const textDirection = isRtl ? "rtl" : "ltr";
+
+      if (pageRoot.getAttribute("dir") !== textDirection) {
+        pageRoot.setAttribute("dir", textDirection);
+      }
+    }
+
+    const languageObserver = new MutationObserver(updateTextDirection);
+
+    languageObserver.observe(pageRoot, {
+      attributes: true,
+      attributeFilter: ["class", "dir", "lang"]
+    });
+    languageObserver.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+    updateTextDirection();
+
     // Start the timeline at the first milestone on every page load.
     const timeline = document.querySelector("section");
 
