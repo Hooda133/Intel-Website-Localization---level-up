@@ -293,6 +293,34 @@ main > p {
   line-height: 1.7;
 }
 
+.accordion-section {
+  max-width: 900px;
+}
+
+.accordion-section h2 {
+  color: #172033;
+}
+
+.accordion-button {
+  color: #172033;
+  font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #003c7d;
+  background-color: #eaf4fb;
+}
+
+.accordion-button:focus {
+  border-color: #00c7fd;
+  box-shadow: 0 0 0 0.25rem rgba(0, 199, 253, 0.25);
+}
+
+.accordion-body {
+  color: #4d5968;
+  line-height: 1.7;
+}
+
 .impact-link {
   color: #005a9e !important;
   transition: transform 0.2s ease, color 0.2s ease;
