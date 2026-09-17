@@ -57,8 +57,8 @@ nav {
 header {
   min-height: 500px;
   background-image: linear-gradient(
-    rgba(0, 60, 125, 0.74),
-    rgba(0, 104, 181, 0.74)
+    rgba(0, 31, 63, 0.84),
+    rgba(0, 60, 125, 0.84)
   ), url("img/Sus.png");
   background-size: cover;
   background-position: right center;
@@ -151,7 +151,7 @@ section > div::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 45, 85, 0.78);
+  background: rgba(0, 31, 63, 0.88);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1;
@@ -308,7 +308,7 @@ main > p {
 }
 
 .subscription-box {
-  background: linear-gradient(135deg, #003c7d, #0068b5);
+  background: linear-gradient(135deg, #002d55, #005a9e);
   color: white;
   border: 1px solid rgba(0, 199, 253, 0.35);
   box-shadow: 0 18px 40px rgba(0, 60, 125, 0.2);
@@ -337,12 +337,43 @@ main > p {
 }
 
 footer {
-  background: linear-gradient(135deg, #001f3f, #003c7d);
+  background: linear-gradient(135deg, #00152b, #00315f);
   color: white;
   text-align: center;
   padding: 18px 20px;
   font-size: 1.18rem;
   font-weight: 400;
+}
+
+.footer-title,
+.copyright {
+  margin: 0;
+}
+
+.footer-links {
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 8px 0;
+  background: transparent;
+}
+
+.footer-links a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: #dceeff;
+  text-decoration: underline;
+}
+
+.copyright {
+  color: #dceeff;
+  font-size: 0.9rem;
 }
 
 /* ------------------------------
@@ -372,6 +403,11 @@ footer {
 
   nav {
     padding: 8px 16px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 8px 18px;
   }
 
   .nav-links {
